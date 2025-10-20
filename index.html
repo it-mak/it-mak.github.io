@@ -1,175 +1,228 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{{ФИО}} — {{Целевая роль}}</title>
-  <meta name="description" content="{{Короткое описание: опыт, стек, что ищешь}}" />
-  <meta name="color-scheme" content="dark light" />
-  <meta property="og:title" content="{{ФИО}} — {{Целевая роль}}" />
-  <meta property="og:description" content="{{Короткое описание}}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="{{URL_аватара}}" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="keywords" content="DevOps, Platform Engineer, Kubernetes, Terraform, GitOps, AWS, CI/CD, Observability" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Эдуард Македонский — Senior DevOps Engineer</title>
+  <meta name="description" content="Senior DevOps Engineer. Kubernetes, Terraform, GitOps, AWS, CI/CD, Observability."/>
+  <meta name="color-scheme" content="dark light"/>
+  <meta property="og:title" content="Эдуард Македонский — Senior DevOps Engineer"/>
+  <meta property="og:description" content="DevOps / Platform Engineer — Kubernetes, AWS, Terraform, GitOps, CI/CD."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="avatar.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="keywords" content="DevOps, Platform Engineer, Kubernetes, Terraform, GitOps, AWS, CI/CD, Observability"/>
+
   <style>
     :root{
       --bg:#0a0f1a; --fg:#ecf1f6; --muted:#9aa4b2; --card:#0f1422; --border:#1b2233;
-      --accent:#00e38c; --accent2:#39b9ff; --chip:#111a2b;
-      --shadow:0 18px 40px rgba(0,0,0,.35);
-      --grad:linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
-      --ring:0 0 0 3px rgba(0,227,140,.28);
+      --accent:#00e38c; --accent2:#39b9ff; --chip:#111a2b; --shadow:0 18px 40px rgba(0,0,0,.35);
+      --grad:linear-gradient(135deg,var(--accent) 0%,var(--accent2) 100%);
     }
-
     *{box-sizing:border-box;margin:0;padding:0}
     html,body{height:100%}
     body{
-      background:
-        radial-gradient(70rem 40rem at -10% -10%, rgba(0,227,140,.25), transparent 60%),
-        radial-gradient(60rem 36rem at 120% 10%, rgba(57,185,255,.22), transparent 60%),
-        radial-gradient(50rem 50rem at 40% 120%, rgba(0,227,140,.18), transparent 60%),
-        var(--bg);
+      min-height:100%;
+      background:var(--bg);
       color:var(--fg);
-      font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-      letter-spacing:.2px;
+      font:16px/1.6 Inter,system-ui,Roboto,Arial,sans-serif;
+    }
+    body::before{
+      content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+      background:
+        radial-gradient(70rem 40rem at -10% -10%,rgba(0,227,140,.22),transparent 60%),
+        radial-gradient(60rem 36rem at 120% 10%,rgba(57,185,255,.20),transparent 60%),
+        radial-gradient(50rem 50rem at 40% 120%,rgba(0,227,140,.16),transparent 60%);
+      background-repeat:no-repeat;
+      background-size:140rem 80rem,120rem 72rem,100rem 100rem;
+      background-position:-10% -10%,120% 10%,40% 120%;
     }
     a{color:inherit;text-decoration:none}
-
     .container{max-width:1100px;margin:0 auto;padding:28px}
     .ribbon{height:6px;background:var(--grad)}
 
-    header.header{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:12px}
-    .header__identity{display:flex;gap:16px;align-items:center}
-    .avatar{width:88px;height:88px;border-radius:14px;object-fit:cover;border:1px solid var(--border);box-shadow:0 10px 30px rgba(0,227,140,.15)}
+    header{position:relative;padding-top:24px}
+    .hero-wrap{max-width:760px}
+    h1{font-size:36px;line-height:1.2;margin-bottom:6px}
+    h1::after{content:"";display:block;width:58%;height:3px;background:var(--grad);border-radius:4px;margin-top:6px}
+    .role{color:var(--muted);font-weight:600;margin-bottom:8px}
+    .summary{max-width:700px;margin-bottom:16px}
 
-    h1{font-size:34px;line-height:1.2;position:relative}
-    h1:after{content:"";position:absolute;left:0;bottom:-8px;width:56%;height:3px;background:var(--grad);border-radius:6px;filter:saturate(120%)}
-    .role{color:var(--muted);font-weight:600;margin-top:6px}
+    .hero-buttons{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+    .btn{
+      display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:10px;
+      border:1px solid var(--border);background:var(--chip);transition:background .2s,color .2s,transform .2s;
+    }
+    .btn:hover{background:var(--grad);color:#08131f;transform:translateY(-1px)}
 
-    .links{display:flex;flex-wrap:wrap;gap:10px}
-    .btn{display:inline-flex;gap:8px;align-items:center;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:var(--chip);color:var(--fg);transition:all .15s ease}
-    .btn--accent{border:1px solid var(--border);background:var(--chip);color:var(--fg);font-weight:600}
-    .btn--accent:hover,.btn--accent:focus-visible{background:var(--grad);color:#08131f;font-weight:700;box-shadow:var(--ring)}
-    .btn:hover{transform:translateY(-1px)}
+    .techs{display:flex;flex-wrap:wrap;gap:8px}
+    .tech{
+      padding:6px 12px;border:1px solid var(--border);border-radius:999px;
+      background:linear-gradient(180deg,rgba(0,227,140,.10),rgba(57,185,255,.08));font-size:14px;
+    }
 
-    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;margin-top:22px}
-    @media (max-width:980px){.grid{grid-template-columns:1fr}}
+    .hero-photo{
+      position:absolute; top:40px; right:0; width:212px; height:255px; border-radius:14px; object-fit:cover;
+      border:1px solid var(--border); box-shadow:0 6px 20px rgba(0,0,0,.35);
+    }
+    @media (max-width:980px){.hero-photo{top:20px}}
 
-    section{background:rgba(15,20,34,.84);backdrop-filter:saturate(140%) blur(6px);border:1px solid var(--border);border-radius:20px;padding:18px 18px 16px;box-shadow:var(--shadow);position:relative;transition:transform .12s ease, box-shadow .12s ease}
-    section:hover{transform:translateY(-2px);box-shadow:0 20px 44px rgba(0,0,0,.45)}
-    section>h2{margin:0 0 12px 0;font-size:18px;padding-left:12px;position:relative}
-    section>h2:before{content:"";position:absolute;left:0;top:2px;width:4px;height:18px;background:var(--grad);border-radius:4px}
+    section{
+      background:rgba(15,20,34,.9); border:1px solid var(--border); border-radius:16px;
+      padding:16px; margin-top:22px; box-shadow:var(--shadow);
+    }
+    section>h2{margin-bottom:10px;font-size:18px;padding-left:12px;position:relative}
+    section>h2::before{
+      content:""; position:absolute; left:0; top:2px; width:4px; height:18px; background:var(--grad); border-radius:4px;
+    }
 
-    .chips{display:flex;gap:8px;flex-wrap:wrap}
-    .chip{display:inline-flex;align-items:center;gap:8px;background:var(--chip);padding:6px 10px;border-radius:999px;border:1px solid var(--border);transition:all .15s ease}
-    .chip:hover,.chip:focus-visible{background:rgba(0,227,140,.10);box-shadow:0 0 0 1px rgba(0,227,140,.38) inset;cursor:pointer}
-
-    .timeline{display:flex;flex-direction:column;gap:16px}
-    .item{padding:12px;border:1px solid var(--border);border-radius:14px;background:linear-gradient(180deg, rgba(0,227,140,.10), rgba(57,185,255,.08))}
+    .timeline{display:flex;flex-direction:column;gap:14px}
+    .item{
+      padding:12px; border:1px solid var(--border); border-radius:14px;
+      background:linear-gradient(180deg,rgba(0,227,140,.10),rgba(57,185,255,.08));
+    }
     .item__head{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:6px}
     .tag{display:inline-block;padding:4px 8px;border-radius:10px;border:1px solid var(--border);background:var(--chip)}
-    .tag--accent{background:rgba(0,227,140,.12);border-color:rgba(0,227,140,.35)}
     .muted{color:var(--muted)}
 
-    ul{margin:0;padding-left:20px}
-    li{margin-bottom:6px}
-    li::marker{color:var(--accent)}
+    ul{padding-left:20px}
+    li{margin-bottom:6px;line-height:1.5}
 
     .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
     .kv div{background:var(--chip);border:1px solid var(--border);border-radius:12px;padding:12px}
 
-    .cv-raw{display:none}
-    footer{margin:26px 0;text-align:center;color:var(--muted)}
-    @media print{
-      body{background:#fff;color:#000}
-      .container{max-width:none}
-      .btn,.links{display:none}
-      .ribbon{display:none}
-      section{break-inside:avoid}
-      h1:after{background:#000}
-    }
+    footer{margin:22px 0;text-align:center;color:var(--muted)}
   </style>
 </head>
 <body>
   <div class="ribbon"></div>
   <div class="container">
-    <header class="header">
-      <div class="header__identity">
-        <img class="avatar" src="{{URL_аватара}}" alt="{{ФИО}}" />
-        <div>
-          <h1>{{ФИО}}</h1>
-          <div class="role">{{Целевая роль}} — {{ключевые области: Kubernetes • GitOps • Terraform • AWS}}</div>
-          <div class="muted">{{Город}} · {{формат работы}} · EN {{уровень}}</div>
+    <header>
+      <img src="avatar.jpg" alt="Эдуард Македонский" class="hero-photo"/>
+      <div class="hero-wrap">
+        <h1>Эдуард Македонский</h1>
+        <div class="role">Senior DevOps Engineer — Kubernetes • GitOps • Terraform • AWS</div>
+        <div class="summary">13+ лет в инфраструктуре, последние 6 — DevOps.</div>
+        <div class="hero-buttons">
+          <a class="btn" href="mailto:eduard.devops@gmail.com">✉️ Email</a>
+          <a class="btn" href="https://t.me/edmak" target="_blank" rel="noopener">📨 Telegram</a>
+          <a class="btn" href="Makedonskii_Eduard.pdf" target="_blank" rel="noopener">⬇️ PDF</a>
         </div>
-      </div>
-      <div class="links">
-        <a class="btn btn--accent" href="mailto:{{email}}">✉️ Email</a>
-        <a class="btn btn--accent" href="https://t.me/{{telegram}}" target="_blank" rel="noreferrer">📨 Telegram</a>
-        <a class="btn btn--accent" href="{{ссылка_на_PDF_резюме}}" target="_blank" rel="noreferrer">⬇️ PDF</a>
+
+        <div class="techs" aria-label="Технологии">
+          <span class="tech">Kubernetes</span>
+          <span class="tech">Helm</span>
+          <span class="tech">ArgoCD</span>
+          <span class="tech">Terraform</span>
+          <span class="tech">Ansible</span>
+          <span class="tech">GitLab CI</span>
+          <span class="tech">Jenkins</span>
+          <span class="tech">Docker</span>
+          <span class="tech">vSphere / KVM</span>
+          <span class="tech">AWS / GCP / Yandex</span>
+          <span class="tech">Prometheus</span>
+          <span class="tech">Grafana</span>
+          <span class="tech">ELK</span>
+          <span class="tech">Sentry</span>
+          <span class="tech">PostgreSQL / MongoDB</span>
+          <span class="tech">Kafka / Redis / RabbitMQ</span>
+          <span class="tech">Python / Bash</span>
+        </div>
       </div>
     </header>
-
-    <div class="grid">
-      <section>
-        <h2>Сильные стороны</h2>
-        <div class="chips" aria-label="Ключевые навыки">
-          <span class="chip">Kubernetes/Helm/ArgoCD</span>
-          <span class="chip">GitOps · CI/CD (GitLab/Jenkins)</span>
-          <span class="chip">Terraform · Ansible · IaC</span>
-          <span class="chip">AWS</span>
-          <span class="chip">Observability: Prometheus/Grafana/ELK/Sentry</span>
-          <span class="chip">Python/Go</span>
-        </div>
-        <div class="cv-raw">Kubernetes, Docker, Helm, ArgoCD, GitOps, GitLab CI, Jenkins, Terraform, Ansible, AWS, Prometheus, Grafana, ELK, EFK, Sentry, Python, Go.</div>
-      </section>
-
-      <section>
-        <h2>Контакты</h2>
-        <ul>
-          <li><b>Email:</b> <a href="mailto:{{email}}">{{email}}</a></li>
-          <li><b>Телефон:</b> <a href="tel:{{телефон_цифрами}}">{{телефон_читаемо}}</a></li>
-          <li><b>Telegram:</b> <a href="https://t.me/{{telegram}}" target="_blank" rel="noreferrer">@{{telegram}}</a></li>
-          <li><b>GitHub:</b> <a href="https://github.com/{{github}}" target="_blank" rel="noreferrer">github.com/{{github}}</a></li>
-          <li><b>Локация:</b> {{Город}}, {{страна}}</li>
-        </ul>
-      </section>
-    </div>
 
     <section>
       <h2>Опыт</h2>
       <div class="timeline">
         <div class="item">
           <div class="item__head">
-            <span class="tag">{{ММ.ГГГГ}} — {{наст/ММ.ГГГГ}}</span>
-            <span class="tag">{{Должность}}</span>
-            <span class="muted">{{Компания / Проект}}</span>
+            <span class="tag">03.2025 — наст.</span>
+            <span class="tag">Senior DevOps Engineer</span>
+            <span class="muted">Проектная работа</span>
           </div>
           <ul>
-            <li>{{1-2 строки контекста проекта / продукта}}</li>
-            <li>{{Достижение/вклад #1}}</li>
-            <li>{{Достижение/вклад #2}}</li>
-            <li>{{Достижение/вклад #3}}</li>
+            <li class="muted">litegallery.io</li>
+            <li>Поднял мониторинг и алертинг; закрыл OOM, отмасштабировал узлы и кластера (capacity &amp; autoscaling).</li>
+            <li>С нуля описал GitOps: ArgoCD + GitLab CI.</li>
+            <li>Спроектировал ванильный Kubernetes, подготовил план ухода с Rancher/Swarm.</li>
+            <li>Документация: runbook, схема сервисов.</li>
+            <li>Интервьюировал DevOps-инженеров; принято решение найма в штат вместо парттайма.</li>
+            <li class="muted">Сайд-таски: саппорт онлайн-репетиторства (PHP/Laravel, nginx, certbot); pet-SaaS-мониторинг (gRPC-агенты на Go, визуализация).</li>
           </ul>
         </div>
+
         <div class="item">
           <div class="item__head">
-            <span class="tag">{{ММ.ГГГГ}} — {{ММ.ГГГГ}}</span>
-            <span class="tag">{{Должность}}</span>
-            <span class="muted">{{Компания}}</span>
+            <span class="tag">06.2024 — 02.2025</span>
+            <span class="tag">Senior DevOps Engineer</span>
+            <span class="muted">МТС / KION</span>
           </div>
           <ul>
-            <li>{{Ключевые задачи}}</li>
-            <li>{{Стек}}</li>
+            <li>Создание новой инфраструктуры для онлайн-кинотеатра: dev/stage/prod, георезерв.</li>
+            <li>Управление микросервисами через Helm/Kubernetes; релизы и окружения как код.</li>
+            <li>CI/CD пайплайны под сервисы и инфраструктуру; артефакты в Harbor/Artifactory.</li>
+            <li>Observability: метрики, логи, алерты (Prometheus, Grafana, ELK, Sentry, VictoriaMetrics).</li>
+            <li>HLD/LLD схемы, участие в архитектурных решениях; нагрузочное тестирование.</li>
+            <li>Ansible/Terraform для провижининга и управления; Vault для секретов.</li>
           </ul>
         </div>
+
+        <div class="item">
+          <div class="item__head">
+            <span class="tag">08.2022 — 04.2024</span>
+            <span class="tag">Senior DevOps Engineer</span>
+            <span class="muted">Azul (Azul JDK — Кипр)</span>
+          </div>
+          <ul>
+            <li>Новый отказоустойчивый Jenkins по IaC; миграции и DR-процедуры.</li>
+            <li>Внедрил Nexus; поддержка сборок Azul JDK под разные платформы.</li>
+            <li>Публикация образов в Docker Hub (azul/zulu-openjdk).</li>
+            <li>Менторинг младшего инженера: планирование, раздача задач, ревью.</li>
+            <li class="muted">SDLC под SOC2: контроль изменений, трассировка, доступы.</li>
+            <li class="muted">Снижение расходов AWS ≈×2: чистки, right-sizing, тэггинг, отчёты (CloudHealth).</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item__head">
+            <span class="tag">08.2021 — 07.2022</span>
+            <span class="tag">DevOps Engineer</span>
+            <span class="muted">Киберпротект (Акронис информзащита)</span>
+          </div>
+          <ul>
+            <li>Перенос инсталляций Jenkins (freestyle/JJB).</li>
+            <li>Переход на IaC (Ansible/JobDSL/groovy libs).</li>
+            <li>Make, Docker, Helm; npm/pypi/rpm; Artifactory, registry, ChartMuseum.</li>
+            <li>Python-скрипты для API-интеграций; деплой прод-облака (Ansible).</li>
+            <li>Zabbix; администрирование on-prem Atlassian (Bitbucket/Jira/Confluence).</li>
+            <li class="muted">Результат: перенос инфраструктуры сборки из глобальной компании в локальную.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item__head">
+            <span class="tag">02.2019 — 08.2021</span>
+            <span class="tag">SDET</span>
+            <span class="muted">Wallarm</span>
+          </div>
+          <ul>
+            <li><b>FAST (DAST-сканер):</b> сборка/тест/релиз; интеграции с CI/CD (GitLab/Jenkins/CircleCI/Bamboo/Azure DevOps).</li>
+            <li>Security-тесты OWASP Top-10; автотесты (Python+pytest+requests+allure); демо/доки.</li>
+            <li><b>WAF Node:</b> релиз Jenkins (scripted, Packer, Make/CMake); тесты установки (Ansible/Terraform/bash); RSpec; релизы под Debian/Ubuntu/CentOS/AL2, Docker/K8s, AWS/GCP/Yandex.</li>
+            <li class="muted">Результат: цикл релиза сокращён ~с 2 мес до 2 нед.</li>
+          </ul>
+        </div>
+
         <div class="item">
           <div class="item__head">
             <span class="tag">2011 — 2017</span>
-            <span class="tag">Системное и сетевое администрирование</span>
-            <span class="muted">{{Компании}}</span>
+            <span class="tag">Ранний опыт (системное администрирование)</span>
+            <span class="muted">KrasotkaPro · MasterTEX · Нева-Ритейл · RIK-Computers</span>
           </div>
           <ul>
-            <li>Системное и сетевое администрирование, серверы и сетевые сервисы, безопасность, резервное копирование.</li>
+            <li>Создание и поддержка ИТ-инфраструктуры: офисы, склады, филиалы (~250 ПК, десятки удалённых точек).</li>
+            <li>Сети, серверы, AD, виртуализация (vSphere/KVM), резервное копирование, мониторинг.</li>
+            <li>Хелпдеск, инциденты, выезды; базовая автоматизация и документация.</li>
           </ul>
         </div>
       </div>
@@ -178,26 +231,32 @@
     <section>
       <h2>Проекты</h2>
       <ul>
-        <li><b>{{Название/клиент}}</b>: {{задача}}; {{что сделал}}; {{стек}}.</li>
-        <li><b>{{Название/клиент}}</b>: {{задача}}; {{что сделал}}; {{стек}}.</li>
+        <li><b>KION (МТС)</b>: Kubernetes, GitLab, Artifactory, Vault, Helm, Terraform, Postgres, MongoDB; observability и нагрузочные стенды.</li>
+        <li><b>Azul JDK</b>: SDLC под SOC2, отказоустойчивый Jenkins по IaC; Nexus; оптимизация AWS-затрат ~×2.</li>
+        <li><b>Киберпротект</b>: перенос и адаптация инфраструктуры сборки; единый Jenkins-стэк.</li>
+        <li><b>litegallery.io</b>: повышение надёжности и стабильности инфры.</li>
+        <li><b>Pet-проект</b>: SaaS-мониторинг (Go-агенты, gRPC, визуализация).</li>
       </ul>
-      <div class="cv-raw">Projects: {{ключевые технологии}}.</div>
     </section>
 
     <section>
-      <h2>Образование, сертификация, курсы</h2>
+      <h2>Образование и сертификация</h2>
       <div class="kv">
-        <div><b>Образование</b><br/>Неполное высшее — {{ВШЭ, Социология / другой вуз}}</div>
-        <div><b>Сертификации</b><br/>CKA — {{год}}; {{другие}}</div>
-        <div><b>Курсы</b><br/>Kubernetes (CKA/GitOps) — {{провайдер, год}}; AWS SA — {{год}}; {{и т.д.}}</div>
-        <div><b>Языки</b><br/>RU — родной; EN — {{уровень}}</div>
+        <div><b>Образование</b><br/>Неполное высшее — ВШЭ, Социология</div>
+        <div>
+          <b>Сертификации</b><br/>CKA<br/>
+          <a href="https://www.credly.com/badges/2ef56e82-74e0-4167-80d4-2cfc61783d4c" target="_blank" rel="noopener" title="Certified Kubernetes Administrator (CKA)">
+            <img src="https://images.credly.com/size/340x340/images/8b8ed108-e77d-4396-ac59-2504583b9d54/cka_from_cncfsite__281_29.png" alt="CKA badge" style="width:90px;height:90px;vertical-align:text-top"/>
+          </a>
+        </div>
+        <div><b>Курсы</b><br/>Kubernetes (Slerm), Python Automation (С. Пирогов), Linux Security (МГТУ им. Баумана), Cisco CCNP (networkeducation)</div>
+        <div><b>Языки</b><br/>RU — родной; EN — B2</div>
       </div>
     </section>
 
-    <footer>
-      © <span id="y"></span> {{ФИО}} · Последнее обновление: <span id="upd"></span>
-    </footer>
+    <footer>© <span id="y"></span> Эдуард Македонский · Последнее обновление: <span id="upd"></span></footer>
   </div>
+
   <script>
     const d=new Date();
     document.getElementById('y').textContent=d.getFullYear();
