@@ -1,21 +1,225 @@
 <!doctype html>
-
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ФИО}} — {{Целевая роль}}</title>
+  <meta name="description" content="{{Короткое описание на 1–2 предложения: опыт, стек, что ищешь}}" />
+  <meta name="color-scheme" content="dark light" />
+  <!-- OG / Twitter -->
+  <meta property="og:title" content="{{ФИО}} — {{Целевая роль}}" />
+  <meta property="og:description" content="{{Короткое описание}}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="{{URL_аватара_или_превью}}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- SEO/ATS keywords (скорректируй под себя) -->
+  <meta name="keywords" content="DevOps, Platform Engineer, Kubernetes, Terraform, GitOps, AWS, CI/CD, Observability" />
+  <style>
+    /* Nexign дух + больше приятной «полировки» без навигации */
+    :root{
+      --bg:#0a0f1a; --fg:#ecf1f6; --muted:#9aa4b2; --card:#0f1422; --border:#1b2233;
+      --accent:#00e38c; --accent2:#39b9ff; --chip:#111a2b;
+      --shadow:0 18px 40px rgba(0,0,0,.35);
+      --grad:linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+      --ring:0 0 0 3px rgba(0,227,140,.28);
+    }
+    @media (prefers-color-scheme: light){
+      :root{--bg:#f6f8fb;--fg:#0b1020;--muted:#5b6678;--card:#ffffff;--border:#e6e9f2;--chip:#eef2f9}
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;letter-spacing:.2px}
+    a{color:inherit}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
 
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="TEST">
-  <meta name="author" content="SitePoint">
+    /* Фон: мягкий паттерн точек + градиентная дымка */
+    body::before{content:"";position:fixed;inset:0;z-index:-2;background:
+      radial-gradient(60rem 40rem at -10% -10%, rgba(0,227,140,.18), transparent 60%),
+      radial-gradient(50rem 30rem at 120% 10%, rgba(57,185,255,.16), transparent 60%),
+      radial-gradient(40rem 40rem at 40% 120%, rgba(0,227,140,.10), transparent 60%);
+      pointer-events:none}
+    body::after{content:"";position:fixed;inset:0;z-index:-1;background:
+      radial-gradient(circle at 24px 24px, rgba(255,255,255,.06) 2px, transparent 2px) 0 0/48px 48px;opacity:.25}
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+    /* Верхняя плашка */
+    .ribbon{height:6px;background:var(--grad)}
 
+    header.header{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:12px}
+    .header__identity{display:flex;gap:16px;align-items:center}
+    .avatar{width:88px;height:88px;border-radius:14px;object-fit:cover;border:1px solid var(--border);box-shadow:0 10px 30px rgba(0,227,140,.15)}
+    h1{font-size:34px;line-height:1.2;margin:0;position:relative}
+    h1:after{content:"";position:absolute;left:0;bottom:-8px;width:56%;height:3px;background:var(--grad);border-radius:6px;filter:saturate(120%)}
+    .role{color:var(--muted);font-weight:600;margin-top:6px}
+
+    .links{display:flex;flex-wrap:wrap;gap:10px}
+    .btn{display:inline-flex;gap:8px;align-items:center;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:var(--chip);text-decoration:none;color:var(--fg);transition:transform .12s ease, box-shadow .12s ease}
+    .btn--accent{background:var(--grad);border:0;color:#08131f;font-weight:700}
+    .btn:hover{transform:translateY(-1px)}
+    .btn:focus-visible{outline:none;box-shadow:var(--ring)}
+
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;margin-top:22px}
+    @media (max-width:980px){.grid{grid-template-columns:1fr}}
+
+    section{background:rgba(15,20,34,.84);backdrop-filter:saturate(140%) blur(6px);border:1px solid var(--border);border-radius:20px;padding:18px 18px 16px;box-shadow:var(--shadow);position:relative;transition:transform .12s ease, box-shadow .12s ease}
+    section:hover{transform:translateY(-2px);box-shadow:0 20px 44px rgba(0,0,0,.45)}
+    section>h2{margin:0 0 12px 0;font-size:18px;padding-left:12px}
+    section>h2:before{content:"";position:absolute;left:18px;top:18px;width:4px;height:18px;background:var(--grad);border-radius:4px}
+
+    .chips{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{display:inline-flex;align-items:center;gap:8px;background:var(--chip);padding:6px 10px;border-radius:999px;border:1px solid var(--border)}
+    .chip--glow{border:0;background:rgba(0,227,140,.10);box-shadow:0 0 0 1px rgba(0,227,140,.38) inset}
+
+    .timeline{display:flex;flex-direction:column;gap:16px}
+    .item{padding:12px;border:1px solid var(--border);border-radius:14px;background:linear-gradient(180deg, rgba(0,227,140,.10), rgba(57,185,255,.08))}
+    .item__head{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:6px}
+    .tag{display:inline-block;padding:4px 8px;border-radius:10px;border:1px solid var(--border);background:var(--chip)}
+    .tag--accent{background:rgba(0,227,140,.12);border-color:rgba(0,227,140,.35)}
+    .muted{color:var(--muted)}
+
+    ul{margin:0;padding-left:20px}
+    li{margin-bottom:6px}
+    li::marker{color:var(--accent)}
+
+    .kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .kv div{background:var(--chip);border:1px solid var(--border);border-radius:12px;padding:12px}
+
+    .cv-raw{display:none}
+    footer{margin:26px 0;text-align:center;color:var(--muted)}
+    @media print{body{background:#fff;color:#000}.container{max-width:none}.btn,.links{display:none}.ribbon{display:none}section{break-inside:avoid}h1:after{background:#000}}
+  </style>
+  <script>
+    // RU/EN переключалка при необходимости (заготовка)
+    function setLang(l){document.documentElement.dataset.lang=l}
+  </script>
+  <!-- JSON‑LD Person (заполни плейсхолдеры) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "{{ФИО}}",
+    "jobTitle": "{{Целевая роль}}",
+    "email": "mailto:{{email}}",
+    "telephone": "{{телефон_с_плюсом}}",
+    "url": "https://{{username}}.github.io/",
+    "address": {"@type":"PostalAddress","addressLocality":"{{Город}}","addressCountry":"RU"},
+    "sameAs": ["https://t.me/{{telegram}}","https://github.com/{{github}}"]
+  }
+  </script>
 </head>
-
 <body>
-[link to Google!](http://google.com)
-test
-  123
-  <script src="js/scripts.js"></script>
+  <div class="ribbon"></div>
+  <div class="container">
+    <header class="header">
+      <div class="header__identity">
+        <img class="avatar" src="{{URL_аватара}}" alt="{{ФИО}}" />
+        <div>
+          <h1>{{ФИО}}</h1>
+          <div class="role">{{Целевая роль}} — {{ключевые области: Kubernetes • GitOps • Terraform • AWS}}</div>
+          <div class="muted">{{Город}} · {{формат работы}} · EN {{уровень}}</div>
+        </div>
+      </div>
+      <div class="links">
+        <a class="btn btn--accent" href="mailto:{{email}}">✉️ Email</a>
+        <a class="btn" href="https://t.me/{{telegram}}" target="_blank" rel="noreferrer">📨 Telegram</a>
+        <a class="btn" href="https://github.com/{{github}}" target="_blank" rel="noreferrer">🐙 GitHub</a>
+        <a class="btn" href="{{ссылка_на_PDF_резюме}}" target="_blank" rel="noreferrer">⬇️ PDF</a>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section>
+        <h2>Сильные стороны</h2>
+        <div class="chips" aria-label="Ключевые навыки">
+          <span class="chip chip--glow">Kubernetes/Helm/ArgoCD</span>
+          <span class="chip">GitOps · CI/CD (GitLab/Jenkins)</span>
+          <span class="chip">Terraform · Ansible · IaC</span>
+          <span class="chip">AWS</span>
+          <span class="chip">Observability: Prometheus/Grafana/ELK/Sentry</span>
+          <span class="chip">Python/Go</span>
+        </div>
+        <!-- ATS‑зеркало (скрыто визуально, читаемо роботами) -->
+        <div class="cv-raw">Kubernetes, Docker, Helm, ArgoCD, GitOps, GitLab CI, Jenkins, Terraform, Ansible, AWS, Prometheus, Grafana, ELK, EFK, Sentry, Python, Go.</div>
+      </section>
+
+      <section>
+        <h2>Контакты</h2>
+        <ul>
+          <li><b>Email:</b> <a href="mailto:{{email}}">{{email}}</a></li>
+          <li><b>Телефон:</b> <a href="tel:{{телефон_цифрами}}">{{телефон_читаемо}}</a></li>
+          <li><b>Telegram:</b> <a href="https://t.me/{{telegram}}" target="_blank" rel="noreferrer">@{{telegram}}</a></li>
+          <li><b>GitHub:</b> <a href="https://github.com/{{github}}" target="_blank" rel="noreferrer">github.com/{{github}}</a></li>
+          <li><b>Локация:</b> {{Город}}, {{страна}}</li>
+        </ul>
+      </section>
+    </div>
+
+    <section>
+      <h2>Опыт</h2>
+      <div class="timeline">
+        <div class="item">
+          <div class="item__head">
+            <span class="tag">{{ММ.ГГГГ}} — {{наст/ММ.ГГГГ}}</span>
+            <span class="tag">{{Должность}}</span>
+            <span class="muted">{{Компания / Проект}}</span>
+          </div>
+          <ul>
+            <li>{{1‑2 строки контекста проекта / продукта}}</li>
+            <li>{{Достижение/вклад #1: действие → технология → результат (без «воды»)}}</li>
+            <li>{{Достижение/вклад #2}}</li>
+            <li>{{Достижение/вклад #3}}</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="item__head">
+            <span class="tag">{{ММ.ГГГГ}} — {{ММ.ГГГГ}}</span>
+            <span class="tag">{{Должность}}</span>
+            <span class="muted">{{Компания}}</span>
+          </div>
+          <ul>
+            <li>{{Ключевые задачи и влияние}}</li>
+            <li>{{Стек и что именно ты делал}}</li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="item__head">
+            <span class="tag">2011 — 2017</span>
+            <span class="tag">Системное и сетевое администрирование</span>
+            <span class="muted">{{Компании: перечисли кратко}}</span>
+          </div>
+          <ul>
+            <li>Системное и сетевое администрирование (офисы/склады/филиалы), серверы и сетевые сервисы, безопасность, резервное копирование.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Проекты</h2>
+      <ul>
+        <li><b>{{Название/клиент}}</b>: {{задача}}; {{что сделал}}; {{стек}}.</li>
+        <li><b>{{Название/клиент}}</b>: {{задача}}; {{что сделал}}; {{стек}}.</li>
+      </ul>
+      <!-- ATS‑зеркало проектов -->
+      <div class="cv-raw">Projects: {{ключевые технологии и задачи сплошным текстом для фильтров}}.</div>
+    </section>
+
+    <section>
+      <h2>Образование, сертификация, курсы</h2>
+      <div class="kv">
+        <div><b>Образование</b><br/>Неполное высшее — {{ВШЭ, Социология / другой вуз}}</div>
+        <div><b>Сертификации</b><br/>CKA — {{год}}; {{другие при наличии}}</div>
+        <div><b>Курсы</b><br/>Kubernetes (CKA/GitOps) — {{провайдер, год}}; AWS SA — {{год}}; {{и т.д.}}</div>
+        <div><b>Языки</b><br/>RU — родной; EN — {{уровень}}</div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> {{ФИО}} · Последнее обновление: <span id="upd"></span>
+    </footer>
+  </div>
+  <script>
+    const d=new Date();
+    document.getElementById('y').textContent=d.getFullYear();
+    document.getElementById('upd').textContent=new Intl.DateTimeFormat('ru',{dateStyle:'medium'}).format(d);
+  </script>
 </body>
 </html>
