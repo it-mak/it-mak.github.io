@@ -20,7 +20,7 @@
   <link rel="alternate" hreflang="x-default" href="https://it-mak.github.io/services.html">
 
   <meta name="color-scheme" content="dark light"/>
-  <meta property="og:title" content="DevOps Mentor & Part-time / Contract Engineer — Eduard Makedonskii"/>
+  <meta property="og:title" content="DevOps Mentor & Part-time / Contract — Eduard Makedonskii"/>
   <meta property="og:description" content="Senior DevOps mentor and engineer for hire (part-time / contract). 13+ years, CKA. Russia, remote."/>
   <meta property="og:type" content="profile"/>
   <meta property="og:image" content="avatar.jpg"/>
@@ -28,24 +28,32 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="ru_RU">
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="DevOps Mentor & Part-time Engineer — Eduard Makedonskii">
+  <meta name="twitter:title" content="DevOps Mentor & Part-time — Eduard Makedonskii">
 
-<!-- Person + Service + FAQPage structured data -->
+<!-- Person + Service + FAQPage + Breadcrumb structured data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Resume", "item": "https://it-mak.github.io/en.html"},
+        {"@type": "ListItem", "position": 2, "name": "Services: mentoring & part-time", "item": "https://it-mak.github.io/services-en.html"}
+      ]
+    },
+    {
       "@type": "Person",
-      "@id": "https://it-mak.github.io/en.html#person",
+      "@id": "https://it-mak.github.io/#person",
       "name": "Eduard Makedonskii",
-      "alternateName": "Эдуард Македонский",
+      "alternateName": ["Эдуард Македонский", "edmak"],
       "jobTitle": "Senior DevOps / Platform Engineer · Mentor",
       "url": "https://it-mak.github.io/en.html",
       "image": "https://it-mak.github.io/avatar.jpg",
       "sameAs": [
         "https://github.com/it-mak",
         "https://t.me/edmak",
+        "https://career.habr.com/eduard_mak",
         "mailto:eduard.devops@gmail.com"
       ],
       "description": "Senior DevOps engineer with 13+ years of experience (last 6 in DevOps). CKA certified. DevOps mentoring, part-time / contract work, project help, DevOps transformation for startups.",
@@ -53,99 +61,40 @@
       "knowsLanguage": ["en", "ru"],
       "knowsAbout": [
         "Kubernetes","Helm","ArgoCD","Terraform","Ansible","GitLab CI","Jenkins",
-        "AWS","GCP","Yandex Cloud","Prometheus","Grafana","ELK","VictoriaMetrics",
-        "Python","Go","SRE","CI/CD","Observability","DevOps mentoring"
+        "AWS","GCP","Yandex Cloud","Selectel","Prometheus","Grafana","VictoriaMetrics",
+        "ELK","Python","Go","SRE","CI/CD","Observability","DevOps mentoring"
       ]
     },
     {
       "@type": "Service",
       "name": "DevOps / SRE Mentoring",
       "serviceType": "Mentoring",
-      "provider": {"@id": "https://it-mak.github.io/en.html#person"},
+      "provider": {"@id": "https://it-mak.github.io/#person"},
       "areaServed": {"@type": "Country", "name": "Worldwide (Remote)"},
       "audience": {"@type": "Audience", "audienceType": "junior, middle, senior DevOps engineers; career switchers; startup founders"},
       "description": "1-on-1 DevOps and SRE mentoring online. Career roadmap, skills development, resume and portfolio review, interview prep, help with real-world tasks and architecture, DevOps transformation for startups.",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://it-mak.github.io/services-en.html",
-        "availability": "https://schema.org/InStock",
-        "priceSpecification": {"@type": "PriceSpecification", "description": "Pricing and format are discussed via Telegram"}
-      }
+      "offers": {"@type": "Offer", "url": "https://it-mak.github.io/services-en.html", "availability": "https://schema.org/InStock"}
     },
     {
       "@type": "Service",
       "name": "DevOps Engineer for Part-time / Contract",
       "serviceType": "ProfessionalService",
-      "provider": {"@id": "https://it-mak.github.io/en.html#person"},
+      "provider": {"@id": "https://it-mak.github.io/#person"},
       "areaServed": {"@type": "Country", "name": "Worldwide (Remote)"},
       "audience": {"@type": "Audience", "audienceType": "startups, product teams, outsourcing agencies"},
       "description": "Senior DevOps engineer for part-time, contract, project-based or one-off work. Kubernetes / GitOps / Terraform / AWS / observability. Remote.",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://it-mak.github.io/services-en.html",
-        "availability": "https://schema.org/InStock",
-        "businessFunction": "https://schema.org/ProvideService"
-      }
+      "offers": {"@type": "Offer", "url": "https://it-mak.github.io/services-en.html", "availability": "https://schema.org/InStock", "businessFunction": "https://schema.org/ProvideService"}
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How can I find a DevOps mentor?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You can start with open mentorship platforms (MentorCruise, GetMentor, Codementor) or reach out directly to a practicing Senior DevOps engineer. I run 1-on-1 DevOps mentoring online: career switch into DevOps, skills development, resume review, interview preparation. Contact: Telegram @edmak."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What types of requests do you take?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Career start or switch (entering IT, switching IT specialty). Skills development (study plan, targeted learning). Assessment (skills, portfolio, resume review, salary expectations). Job search (resume for Russian and international markets, interview prep, mock interviews). Help with a real-world task or project. Building an international career."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is your specialization?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Core specialization: CI/CD and the automation around it — Kubernetes / GitOps / Terraform / Ansible / Jenkins / GitLab CI. Experience with high-load systems, building observability (Prometheus / Grafana / VictoriaMetrics / ELK), and rolling out new platforms. CKA certified."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you help with DevOps transformation for a startup?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. I help startups build DevOps practices from scratch or accelerate an in-progress transformation: infrastructure as code, CI/CD pipelines, GitOps, observability, security. Format: team mentoring, one-off consultation, or part-time engagement."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are you available for part-time or contract work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Available for part-time, project-based or one-off tasks, and contracts. Remote, located in Russia. Stack: Kubernetes / Helm / ArgoCD / Terraform / Ansible / AWS / GCP / Yandex Cloud / Python / Go."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you teach how to pass interviews?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. I'm strongly against \"interview hacking\" — I share knowledge and real experience, not scripted answers. That said, I can run a mock interview, identify weak spots, and share practical preparation insights."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What languages do you work in?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Russian — native. English — working proficiency (B2). I can mentor in English, help with English-language resumes and interview preparation for international companies."
-          }
-        }
+        {"@type": "Question", "name": "How can I find a DevOps mentor?", "acceptedAnswer": {"@type": "Answer", "text": "Start with open mentorship platforms (MentorCruise, GetMentor, Codementor) or reach out directly to a practicing Senior DevOps engineer. Eduard Makedonskii runs 1-on-1 DevOps mentoring online: career switch into DevOps, skills development, resume review, interview preparation. Contact: Telegram @edmak."}},
+        {"@type": "Question", "name": "What types of requests do you take?", "acceptedAnswer": {"@type": "Answer", "text": "Career start or switch (entering IT, switching IT specialty). Skills development (study plan, targeted learning). Assessment (skills, portfolio, resume review, salary expectations). Job search (resume for Russian and international markets, interview prep, mock interviews). Help with a real-world task or project. Building an international career."}},
+        {"@type": "Question", "name": "What is your specialization?", "acceptedAnswer": {"@type": "Answer", "text": "Core specialization: CI/CD and the automation around it — Kubernetes / GitOps / Terraform / Ansible / Jenkins / GitLab CI. Experience with high-load systems, building observability (Prometheus / Grafana / VictoriaMetrics / ELK), and rolling out new platforms. CKA certified."}},
+        {"@type": "Question", "name": "Can you help with DevOps transformation for a startup?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Help startups build DevOps practices from scratch or accelerate an in-progress transformation: infrastructure as code, CI/CD pipelines, GitOps, observability, security. Format: team mentoring, one-off consultation, or part-time engagement."}},
+        {"@type": "Question", "name": "Are you available for part-time or contract work?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Available for part-time, project-based or one-off tasks, and contracts. Remote, located in Russia. Stack: Kubernetes / Helm / ArgoCD / Terraform / Ansible / AWS / GCP / Yandex Cloud / Python / Go."}},
+        {"@type": "Question", "name": "Do you teach how to pass interviews?", "acceptedAnswer": {"@type": "Answer", "text": "No. I'm strongly against \"interview hacking\" — I share knowledge and real experience, not scripted answers. That said, I can run a mock interview, identify weak spots, and share practical preparation insights."}},
+        {"@type": "Question", "name": "What languages do you work in?", "acceptedAnswer": {"@type": "Answer", "text": "Russian — native. English — working proficiency (B2). I can mentor in English, help with English-language resumes and interview preparation for international companies."}}
       ]
     }
   ]
@@ -154,81 +103,110 @@
 
   <style>
     :root{
-      --bg:#0a0f1a; --fg:#ecf1f6; --muted:#9aa4b2; --card:#0f1422; --border:#1b2233;
-      --accent:#00e38c; --accent2:#39b9ff; --chip:#111a2b; --shadow:0 18px 40px rgba(0,0,0,.35);
+      --bg:#0a0f1a; --fg:#ecf1f6; --muted:#9aa4b2; --border:#1b2233;
+      --accent:#00e38c; --accent2:#39b9ff; --chip:#101724;
       --grad:linear-gradient(135deg,var(--accent) 0%,var(--accent2) 100%);
     }
     *{box-sizing:border-box;margin:0;padding:0}
     html,body{height:100%}
-    body{min-height:100%;background:var(--bg);color:var(--fg);font:16px/1.6 Inter,system-ui,Roboto,Arial,sans-serif}
+    body{min-height:100%;background:var(--bg);color:var(--fg);font:16px/1.65 Inter,system-ui,-apple-system,Roboto,Arial,sans-serif;letter-spacing:.1px}
     body::before{
       content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
       background:
-        radial-gradient(70rem 40rem at -10% -10%,rgba(0,227,140,.22),transparent 60%),
-        radial-gradient(60rem 36rem at 120% 10%,rgba(57,185,255,.20),transparent 60%),
-        radial-gradient(50rem 50rem at 40% 120%,rgba(0,227,140,.16),transparent 60%);
+        radial-gradient(60rem 36rem at -10% -10%,rgba(0,227,140,.10),transparent 60%),
+        radial-gradient(50rem 30rem at 120% 10%,rgba(57,185,255,.09),transparent 60%);
       background-repeat:no-repeat;
-      background-size:140rem 80rem,120rem 72rem,100rem 100rem;
-      background-position:-10% -10%,120% 10%,40% 120%;
     }
     a{color:inherit;text-decoration:none}
-    a.link{color:var(--accent);text-decoration:underline}
-    .container{max-width:1100px;margin:0 auto;padding:28px}
-    .ribbon{height:6px;background:var(--grad)}
-    header{position:relative;padding-top:24px;display:flex;align-items:flex-start;gap:24px}
-    .hero-wrap{max-width:760px;flex:1 1 auto;order:1}
-    h1{font-size:34px;line-height:1.2;margin-bottom:8px}
-    h1::after{content:"";display:block;width:58%;height:3px;background:var(--grad);border-radius:4px;margin-top:6px}
-    .role{color:var(--muted);font-weight:600;margin-bottom:8px}
-    .summary{max-width:720px;margin-bottom:16px}
-    .hero-buttons{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
-    .btn{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:10px;border:1px solid var(--border);background:var(--chip);transition:background .2s,color .2s,transform .2s}
-    .btn:hover{background:var(--grad);color:#08131f;transform:translateY(-1px)}
-    .hero-photo{order:2;flex-shrink:0;width:clamp(120px,18vw,180px);height:auto;border-radius:14px;object-fit:cover;border:1px solid var(--border);box-shadow:0 6px 20px rgba(0,0,0,.35)}
-    @media (max-width:480px){h1{font-size:28px}.hero-photo{width:clamp(100px,26vw,140px)}}
-    section{background:rgba(15,20,34,.9);border:1px solid var(--border);border-radius:16px;padding:18px;margin-top:22px;box-shadow:var(--shadow)}
-    section>h2{margin-bottom:12px;font-size:20px;padding-left:14px;position:relative}
-    section>h2::before{content:"";position:absolute;left:0;top:3px;width:4px;height:22px;background:var(--grad);border-radius:4px}
-    section>h3{margin:14px 0 6px;font-size:16px;color:var(--fg)}
-    .lead{font-size:17px;color:var(--fg)}
-    .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:10px}
-    .pill{padding:14px;border:1px solid var(--border);border-radius:14px;background:linear-gradient(180deg,rgba(0,227,140,.10),rgba(57,185,255,.08))}
-    .pill h3{margin:0 0 6px;font-size:16px}
-    .pill ul{margin:0;padding-left:18px}
-    .pill li{margin-bottom:3px;line-height:1.5;font-size:14.5px}
-    .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
-    .chip{padding:5px 10px;border:1px solid var(--border);border-radius:999px;background:linear-gradient(180deg,rgba(0,227,140,.10),rgba(57,185,255,.08));font-size:13px}
-    .faq details{border:1px solid var(--border);border-radius:12px;background:var(--chip);padding:10px 14px;margin-bottom:8px}
-    .faq summary{cursor:pointer;font-weight:600;list-style:none;padding:4px 0}
+    a.link{color:var(--accent);border-bottom:1px solid rgba(0,227,140,.4)}
+    a.link:hover{border-color:var(--accent)}
+    .container{max-width:880px;margin:0 auto;padding:36px 28px 56px}
+    .ribbon{height:4px;background:var(--grad)}
+
+    .breadcrumbs{font-size:13px;color:var(--muted);margin-bottom:20px}
+    .breadcrumbs a:hover{color:var(--fg)}
+
+    header{display:flex;align-items:flex-start;gap:24px;margin-bottom:40px}
+    .hero-photo{
+      flex-shrink:0;width:clamp(96px,14vw,128px);height:auto;
+      border-radius:12px;object-fit:cover;border:1px solid var(--border);
+    }
+    .hero-wrap{flex:1 1 auto;min-width:0}
+    h1{font-size:30px;line-height:1.2;margin-bottom:6px;letter-spacing:-.3px}
+    h1::after{content:"";display:block;width:48px;height:2px;background:var(--grad);margin-top:10px;border-radius:2px}
+    .role{color:var(--muted);font-size:15px;margin:14px 0 6px}
+    .summary{margin-bottom:18px;color:var(--fg)}
+    .hero-buttons{display:flex;gap:8px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:8px;
+      border:1px solid var(--border);font-size:14px;
+      transition:border-color .15s, color .15s;
+    }
+    .btn:hover{border-color:var(--accent);color:var(--accent)}
+    .btn--primary{background:var(--accent);border-color:var(--accent);color:#08131f;font-weight:600}
+    .btn--primary:hover{background:#00c97e;border-color:#00c97e;color:#08131f}
+    @media (max-width:520px){h1{font-size:25px}.hero-photo{width:88px}}
+
+    section{margin-top:56px}
+    section > h2{font-size:22px;line-height:1.3;margin-bottom:8px;letter-spacing:-.2px}
+    section > .sub{color:var(--muted);font-size:14px;margin-bottom:20px}
+
+    .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:14px}
+    .card{padding:16px 18px;border:1px solid var(--border);border-radius:10px;background:rgba(15,20,34,.45)}
+    .card h3{font-size:15px;margin-bottom:8px;color:var(--fg)}
+    .card ul{margin:0;padding-left:18px;color:var(--muted)}
+    .card li{margin:0 0 4px;font-size:14px;line-height:1.5}
+    .card li:last-child{margin-bottom:0}
+
+    .approach{margin-top:18px;padding:0;list-style:none}
+    .approach li{padding:6px 0 6px 18px;position:relative;color:var(--fg)}
+    .approach li::before{content:"";position:absolute;left:0;top:13px;width:6px;height:6px;border-radius:2px;background:var(--accent)}
+
+    .meta-row{display:flex;gap:18px;flex-wrap:wrap;padding:14px 0;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+    .meta-row b{color:var(--fg);font-weight:600}
+
+    .faq{margin-top:14px}
+    .faq details{border-bottom:1px solid var(--border);padding:14px 0}
+    .faq details:first-child{border-top:1px solid var(--border)}
+    .faq summary{cursor:pointer;font-weight:500;list-style:none;font-size:15.5px;color:var(--fg);display:flex;align-items:center;justify-content:space-between;gap:10px}
     .faq summary::-webkit-details-marker{display:none}
-    .faq summary::after{content:"+";float:right;color:var(--accent);font-weight:700}
-    .faq details[open] summary::after{content:"–"}
-    .faq details>div{padding:8px 0 4px;color:var(--fg);line-height:1.55}
-    .cta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:16px;margin-top:22px;border:1px solid var(--border);border-radius:14px;background:linear-gradient(135deg,rgba(0,227,140,.12),rgba(57,185,255,.10))}
-    .cta b{font-size:17px}
-    .breadcrumbs{font-size:13px;color:var(--muted);margin-bottom:8px}
-    .breadcrumbs a{color:var(--muted)}
-    footer{margin:22px 0;text-align:center;color:var(--muted);font-size:14px}
+    .faq summary::after{content:"";flex-shrink:0;width:8px;height:8px;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:rotate(45deg);transition:transform .2s}
+    .faq details[open] summary::after{transform:rotate(-135deg)}
+    .faq details > div{padding:10px 0 0;color:var(--muted);line-height:1.6;font-size:14.5px}
+
+    .cta{margin-top:40px;padding:22px 24px;border:1px solid var(--border);border-radius:12px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+    .cta b{font-size:16px}
+    .cta .btn{margin-left:auto}
+    @media (max-width:520px){.cta .btn{margin-left:0}}
+
+    footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:13px}
+    footer a{color:var(--muted)}
+    footer a:hover{color:var(--fg)}
 
     @media print {
-      @page { size: A4; margin: 11mm 12mm; }
+      @page { size: A4; margin: 14mm; }
       *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important}
-      html,body{background:#fff !important;color:#0b1020 !important;font:10pt/1.45 Inter,system-ui,Arial,sans-serif !important}
-      body::before,body::after{display:none !important}
+      html,body{background:#fff !important;color:#0b1020 !important;font:10pt/1.5 Inter,system-ui,Arial,sans-serif !important}
+      body::before{display:none !important}
       .container{max-width:none !important;padding:0 !important}
       .hero-buttons,.cta{display:none !important}
-      .hero-photo{width:96px !important;box-shadow:none !important}
+      .breadcrumbs{display:none !important}
+      .hero-photo{width:84px !important}
       h1{font-size:20pt !important;color:#0b1020 !important}
-      h1::after{background:linear-gradient(135deg,#00a86b 0%,#2196f3 100%) !important;height:2.5px !important}
-      .role{color:#4a5568 !important}
-      section{background:#fff !important;border:1px solid #d8dde7 !important;box-shadow:none !important;page-break-inside:avoid;break-inside:avoid;padding:10px 12px !important;margin-top:10px !important}
-      section>h2{color:#0b1020 !important;font-size:13pt !important}
-      section>h2::before{background:linear-gradient(135deg,#00a86b 0%,#2196f3 100%) !important}
-      .pill{background:#f6f8fb !important;border:1px solid #d8dde7 !important}
-      .chip{background:#eef2f9 !important;border:1px solid #d8dde7 !important;color:#0b1020 !important;font-size:8pt !important}
-      .faq details{background:#f6f8fb !important;border:1px solid #d8dde7 !important}
+      h1::after{background:linear-gradient(135deg,#00a86b 0%,#2196f3 100%) !important}
+      section{margin-top:24px !important;page-break-inside:avoid;break-inside:avoid}
+      section > h2{color:#0b1020 !important;font-size:14pt !important}
+      .card{background:#fafbfd !important;border:1px solid #d8dde7 !important;page-break-inside:avoid}
+      .card h3{color:#0b1020 !important}
+      .card ul{color:#3a4150 !important}
+      .approach li{color:#0b1020 !important}
+      .approach li::before{background:#0b1020 !important}
+      .faq summary{color:#0b1020 !important}
       .faq summary::after{display:none !important}
-      a{color:#0b1020 !important;text-decoration:none !important}
+      .faq details > div{color:#3a4150 !important}
+      .meta-row{color:#3a4150 !important;border-color:#d8dde7 !important}
+      .meta-row b{color:#0b1020 !important}
+      a{color:#0b1020 !important;border-bottom:none !important}
       footer{display:none !important}
     }
   </style>
@@ -236,153 +214,169 @@
 <body>
   <div class="ribbon"></div>
   <div class="container">
-    <div class="breadcrumbs"><a href="en.html">Resume</a> · <span>Services: mentoring & part-time</span></div>
+    <div class="breadcrumbs"><a href="en.html">Resume</a> &nbsp;›&nbsp; <span>Services</span></div>
 
     <header>
-      <img src="avatar.jpg" alt="Eduard Makedonskii — DevOps mentor" class="hero-photo" width="424" height="510" loading="eager" decoding="async"/>
+      <img src="avatar.jpg" alt="Eduard Makedonskii — Senior DevOps engineer and DevOps mentor" class="hero-photo" width="424" height="510" loading="eager" decoding="async"/>
       <div class="hero-wrap">
-        <h1>DevOps Mentoring & Part-time / Contract</h1>
-        <div class="role">Eduard Makedonskii — Senior DevOps Engineer (13+ years, CKA) · Russia · Remote</div>
-        <p class="summary">I help engineers switch into DevOps, level up, get their resume in shape, and prepare for interviews. I take on startups for DevOps transformation and join teams part-time / contract / one-off. I share real experience — I don't teach interview hacking.</p>
+        <h1>DevOps Mentoring &amp; Part-time</h1>
+        <div class="role">Eduard Makedonskii · Senior DevOps Engineer · 13+ years, CKA · Russia · Remote</div>
+        <p class="summary">I help engineers switch into DevOps, level up, get their resume in shape and prepare for interviews. I take on startups for DevOps transformation and join teams part-time / contract / one-off. I share real experience — I don't teach interview hacking.</p>
         <div class="hero-buttons">
-          <a class="btn" href="https://t.me/edmak" target="_blank" rel="noopener">📨 Message on Telegram</a>
-          <a class="btn" href="mailto:eduard.devops@gmail.com">✉️ Email</a>
-          <a class="btn" href="en.html">📄 Resume</a>
-          <a class="btn" href="services.html" hreflang="ru" title="Russian version">🇷🇺 RU</a>
+          <a class="btn btn--primary" href="https://t.me/edmak" target="_blank" rel="noopener">Message on Telegram</a>
+          <a class="btn" href="mailto:eduard.devops@gmail.com">Email</a>
+          <a class="btn" href="en.html">Resume</a>
+          <a class="btn" href="services.html" hreflang="ru">RU</a>
         </div>
       </div>
     </header>
 
     <section id="mentoring">
-      <h2>1. DevOps / SRE Mentoring</h2>
-      <p class="lead">1-on-1 DevOps mentoring online. I work with both career switchers entering DevOps and practicing engineers who want feedback from someone in the field.</p>
+      <h2>DevOps / SRE Mentoring</h2>
+      <div class="sub">1-on-1, online. For people entering DevOps and for practicing engineers — feedback from someone in the field.</div>
 
-      <h3>Skills I help with</h3>
-      <div class="chips">
-        <span class="chip">Kubernetes</span><span class="chip">CI/CD</span><span class="chip">Jenkins</span>
-        <span class="chip">GitLab</span><span class="chip">AWS</span><span class="chip">Ansible</span>
-        <span class="chip">Linux</span><span class="chip">Linux administration</span>
-        <span class="chip">Monitoring</span><span class="chip">Grafana</span>
-        <span class="chip">SRE</span><span class="chip">High-load systems</span><span class="chip">DevOps</span>
-      </div>
-
-      <h3>Types of requests I take</h3>
-      <div class="pillars">
-        <div class="pill">
-          <h3>Career start / switch</h3>
-          <ul><li>Entering IT</li><li>Switching IT specialty</li></ul>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Career &amp; skills</h3>
+          <ul>
+            <li>Entering IT, switching IT specialty</li>
+            <li>Targeted study plan</li>
+            <li>Skill development (Kubernetes, CI/CD, AWS, observability, SRE)</li>
+          </ul>
         </div>
-        <div class="pill">
-          <h3>Skills development</h3>
-          <ul><li>Study plan</li><li>Targeted skill development</li></ul>
+        <div class="card">
+          <h3>Resume &amp; interviews</h3>
+          <ul>
+            <li>Skills and portfolio assessment, salary expectations</li>
+            <li>Resume for Russian and international markets</li>
+            <li>Interview prep, mock interviews</li>
+          </ul>
         </div>
-        <div class="pill">
-          <h3>Assessment</h3>
-          <ul><li>Skills assessment</li><li>Portfolio assessment</li><li>Resume review</li><li>Salary expectations</li></ul>
-        </div>
-        <div class="pill">
-          <h3>Job search</h3>
-          <ul><li>Resume for the Russian market</li><li>Resume for international markets</li><li>Interview preparation</li><li>Mock interview</li></ul>
-        </div>
-        <div class="pill">
+        <div class="card">
           <h3>Project help</h3>
-          <ul><li>Real-world task help</li><li>Project consultation</li></ul>
+          <ul>
+            <li>Real-world task — outside-in view</li>
+            <li>Architecture, review</li>
+            <li>Project consultation</li>
+          </ul>
         </div>
-        <div class="pill">
+        <div class="card">
           <h3>International career</h3>
-          <ul><li>Resume for international markets</li><li>Building a career abroad</li></ul>
+          <ul>
+            <li>Resume and pitch for international markets</li>
+            <li>Building a career abroad</li>
+            <li>Interview prep in English</li>
+          </ul>
         </div>
       </div>
 
-      <h3>Approach</h3>
-      <ul style="padding-left:20px;margin-top:6px">
-        <li>Strongly against interview-hacking schools: I share knowledge and experience, not scripted answers — I will share some practical secrets though.</li>
-        <li>Outside-in view on real tasks and architecture — extensive exposure to many different projects.</li>
-        <li>Core specialization: CI/CD and automation around it; experience with high-load systems and observability.</li>
-        <li>CKA certified, professional courses (Slerm, Python Automation, Linux Security at Bauman MSTU, Cisco CCNP).</li>
+      <ul class="approach">
+        <li>Strongly against interview-hacking schools — I share real knowledge and experience, not scripted answers. I'll share some practical secrets though.</li>
+        <li>Broad exposure across many projects — I bring an outside-in view on tasks and architecture.</li>
+        <li>Core specialization: CI/CD and the automation around it; experience with high-load systems and observability.</li>
       </ul>
+
+      <div class="meta-row">
+        <span><b>Certification:</b> CKA</span>
+        <span><b>Courses:</b> Slerm, Bauman MSTU (Linux Security), Cisco CCNP</span>
+        <span><b>Languages:</b> RU native, EN B2</span>
+      </div>
     </section>
 
     <section id="hire">
-      <h2>2. DevOps Engineer for Part-time / Contract / Outsourcing</h2>
-      <p class="lead">I take on project-based and one-off engagements, available for part-time. Remote, located in Russia.</p>
+      <h2>Part-time / contract / outsourcing</h2>
+      <div class="sub">Senior DevOps engineer for project-based and one-off engagements. Remote, base time zone: Moscow.</div>
 
-      <h3>What I do</h3>
-      <div class="pillars">
-        <div class="pill">
-          <h3>Greenfield infrastructure</h3>
-          <ul><li>Terraform / Ansible</li><li>AWS / GCP / Yandex Cloud / Selectel</li><li>vSphere / KVM</li></ul>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Infrastructure</h3>
+          <ul>
+            <li>Greenfield: Selectel, AWS, GCP, Yandex Cloud</li>
+            <li>Terraform, Ansible</li>
+            <li>vSphere / KVM</li>
+          </ul>
         </div>
-        <div class="pill">
-          <h3>Kubernetes / GitOps</h3>
-          <ul><li>Vanilla K8s, migration off Swarm/Rancher</li><li>Helm + ArgoCD</li><li>Capacity & autoscaling (HPA)</li></ul>
+        <div class="card">
+          <h3>Kubernetes &amp; CI/CD</h3>
+          <ul>
+            <li>Vanilla K8s, migration off Swarm/Rancher</li>
+            <li>Helm + ArgoCD (GitOps)</li>
+            <li>GitLab CI, Jenkins, Harbor / Artifactory / Nexus</li>
+          </ul>
         </div>
-        <div class="pill">
-          <h3>CI/CD</h3>
-          <ul><li>GitLab CI, Jenkins</li><li>Build / test / release</li><li>Docker / Harbor / Artifactory / Nexus</li></ul>
-        </div>
-        <div class="pill">
+        <div class="card">
           <h3>Observability &amp; SRE</h3>
-          <ul><li>Prometheus / VictoriaMetrics / Grafana</li><li>ELK / Sentry</li><li>Alerting, runbooks, SLOs</li></ul>
+          <ul>
+            <li>Prometheus / VictoriaMetrics / Grafana</li>
+            <li>ELK / Sentry</li>
+            <li>Alerting, runbooks, SLOs</li>
+          </ul>
         </div>
-        <div class="pill">
-          <h3>Security &amp; platform</h3>
-          <ul><li>Vault, Keycloak, SonarQube</li><li>Encrypted backups (restic + S3)</li><li>SOC 2-aligned SDLC</li></ul>
-        </div>
-        <div class="pill">
-          <h3>DevOps transformation for startups</h3>
-          <ul><li>Platform from scratch</li><li>IaC + GitOps + observability</li><li>Process and documentation</li></ul>
+        <div class="card">
+          <h3>Platform &amp; security</h3>
+          <ul>
+            <li>Vault, Keycloak, SonarQube</li>
+            <li>Encrypted backups (restic + S3)</li>
+            <li>SOC 2-aligned SDLC, startup DevOps transformation</li>
+          </ul>
         </div>
       </div>
 
-      <h3>Format</h3>
-      <ul style="padding-left:20px;margin-top:6px">
-        <li>Part-time / contract / one-off consultations.</li>
-        <li>Remote, flexible time zone (base: Moscow).</li>
-        <li>Russia and international (working English, B2).</li>
-      </ul>
+      <div class="meta-row">
+        <span><b>Format:</b> part-time, contract, one-off</span>
+        <span><b>Time zone:</b> Moscow, flexible</span>
+        <span><b>Location:</b> Russia, remote</span>
+      </div>
     </section>
 
-    <section id="faq" class="faq">
+    <section id="faq">
       <h2>FAQ</h2>
-      <details>
-        <summary>How can I find a DevOps mentor?</summary>
-        <div>Start with open mentorship platforms (MentorCruise, GetMentor, Codementor) or reach out directly to a practicing Senior DevOps engineer. I run 1-on-1 DevOps mentoring online: career switch, skills, resume review, interview prep. Contact: <a class="link" href="https://t.me/edmak" target="_blank" rel="noopener">Telegram @edmak</a>.</div>
-      </details>
-      <details>
-        <summary>What types of requests do you take?</summary>
-        <div>Career start or switch (entering IT, switching IT specialty). Skills development (study plan, targeted learning). Assessment (skills, portfolio, resume review, salary expectations). Job search (resume for Russian and international markets, interview prep, mock interviews). Help with a real-world task or project. Building an international career.</div>
-      </details>
-      <details>
-        <summary>What is your specialization?</summary>
-        <div>Core specialization: CI/CD and the automation around it — Kubernetes / GitOps / Terraform / Ansible / Jenkins / GitLab CI. Experience with high-load systems, building observability (Prometheus / Grafana / VictoriaMetrics / ELK), and rolling out new platforms. CKA certified.</div>
-      </details>
-      <details>
-        <summary>Can you help with DevOps transformation for a startup?</summary>
-        <div>Yes. I help build DevOps practices from scratch or accelerate an in-progress transformation: IaC, CI/CD, GitOps, observability, security. Format: team mentoring, one-off consultation, or part-time engagement.</div>
-      </details>
-      <details>
-        <summary>Are you available for part-time or contract work?</summary>
-        <div>Yes. Available for part-time, project-based or one-off tasks, and contracts. Remote, located in Russia. Stack: Kubernetes / Helm / ArgoCD / Terraform / Ansible / AWS / GCP / Yandex Cloud / Python / Go.</div>
-      </details>
-      <details>
-        <summary>Do you teach how to pass interviews?</summary>
-        <div>No. I'm strongly against "interview hacking" — I share knowledge and real experience, not scripted answers. That said, I can run a mock interview, identify weak spots, and share practical preparation insights.</div>
-      </details>
-      <details>
-        <summary>What languages do you work in?</summary>
-        <div>Russian — native. English — working proficiency (B2). I can mentor in English and help with English-language resumes and interview preparation for international companies.</div>
-      </details>
+      <div class="faq">
+        <details>
+          <summary>How can I find a DevOps mentor?</summary>
+          <div>Start with open mentorship platforms (MentorCruise, GetMentor, Codementor) or reach out directly to a practicing Senior DevOps engineer. I run 1-on-1 DevOps mentoring online: career switch, skills, resume review, interview prep. Contact: <a class="link" href="https://t.me/edmak" target="_blank" rel="noopener">Telegram @edmak</a>.</div>
+        </details>
+        <details>
+          <summary>What types of requests do you take?</summary>
+          <div>Career start or switch (entering IT, switching IT specialty). Skills development (study plan, targeted learning). Assessment (skills, portfolio, resume review, salary expectations). Job search (resume for Russian and international markets, interview prep, mock interviews). Help with a real-world task or project. Building an international career.</div>
+        </details>
+        <details>
+          <summary>What is your specialization?</summary>
+          <div>CI/CD and the automation around it: Kubernetes / GitOps / Terraform / Ansible / Jenkins / GitLab CI. Experience with high-load systems, building observability (Prometheus / Grafana / VictoriaMetrics / ELK), and rolling out new platforms. CKA certified.</div>
+        </details>
+        <details>
+          <summary>Can you help with DevOps transformation for a startup?</summary>
+          <div>Yes. Help build DevOps practices from scratch or accelerate an in-progress transformation: IaC, CI/CD, GitOps, observability, security. Format: team mentoring, one-off consultation, or part-time engagement.</div>
+        </details>
+        <details>
+          <summary>Are you available for part-time or contract work?</summary>
+          <div>Yes. Available for part-time, project-based or one-off tasks, and contracts. Remote, located in Russia. Stack: Kubernetes / Helm / ArgoCD / Terraform / Ansible / AWS / GCP / Yandex Cloud / Python / Go.</div>
+        </details>
+        <details>
+          <summary>Do you teach how to pass interviews?</summary>
+          <div>No. I'm strongly against "interview hacking" — I share knowledge and real experience, not scripted answers. That said, I can run a mock interview, identify weak spots, and share practical preparation insights.</div>
+        </details>
+        <details>
+          <summary>What languages do you work in?</summary>
+          <div>Russian — native. English — working proficiency (B2). I can mentor in English and help with English-language resumes and interview preparation for international companies.</div>
+        </details>
+      </div>
     </section>
 
     <div class="cta">
       <b>Ready to talk?</b>
-      <a class="btn" href="https://t.me/edmak" target="_blank" rel="noopener">📨 Telegram @edmak</a>
-      <a class="btn" href="mailto:eduard.devops@gmail.com">✉️ eduard.devops@gmail.com</a>
-      <a class="btn" href="en.html">📄 Full resume</a>
+      <span style="color:var(--muted);font-size:14px">Telegram is the fastest way.</span>
+      <a class="btn btn--primary" href="https://t.me/edmak" target="_blank" rel="noopener">Message @edmak</a>
     </div>
 
-    <footer>© <span id="y"></span> Eduard Makedonskii · <a class="link" href="en.html">Resume (EN)</a> · <a class="link" href="./">Резюме (RU)</a> · <a class="link" href="services.html">Услуги (RU)</a></footer>
+    <footer>
+      © <span id="y"></span> Eduard Makedonskii ·
+      <a href="en.html">Resume</a> ·
+      <a href="./">RU resume</a> ·
+      <a href="services.html">RU services</a> ·
+      <a href="https://career.habr.com/eduard_mak" target="_blank" rel="noopener">Habr Career</a> ·
+      <a href="https://github.com/it-mak" target="_blank" rel="noopener">GitHub</a>
+    </footer>
   </div>
 
   <script>document.getElementById('y').textContent=new Date().getFullYear();</script>

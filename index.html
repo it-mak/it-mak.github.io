@@ -33,40 +33,84 @@
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Эдуард Македонский — Senior DevOps Engineer">
 
-<!-- Structured data: Person -->
+<!-- Structured data: ProfilePage + Person + WebSite -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Эдуард Македонский",
-  "jobTitle": "Senior DevOps / Platform Engineer",
-  "url": "https://it-mak.github.io/",
-  "image": "https://it-mak.github.io/avatar.jpg",
-  "sameAs": [
-    "https://github.com/it-mak",
-    "https://t.me/edmak",
-    "mailto:eduard.devops@gmail.com"
-  ],
-  "description": "Senior DevOps Engineer (13+ years). Kubernetes, Terraform, AWS, GitOps, CI/CD, Observability. Open for part-time, contract and project-based tasks. Remote only.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Saint Petersburg",
-    "addressCountry": "RU"
-  },
-  "knowsAbout": [
-    "Kubernetes","Terraform","AWS","GitOps","CI/CD",
-    "Prometheus","Grafana","ELK","Python","Go","Kafka","PostgreSQL"
-  ],
-  "hasOccupation": {
-    "@type": "Occupation",
-    "name": "Senior DevOps Engineer",
-    "occupationLocation": { "@type": "Country", "name": "Remote / Worldwide" }
-  },
-  "subjectOf": {
-  "@type": "CreativeWork",
-  "name": "Resume (PDF)",
-  "url": "https://it-mak.github.io/Makedonskii_Eduard.pdf"
-}
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://it-mak.github.io/#website",
+      "url": "https://it-mak.github.io/",
+      "name": "Эдуард Македонский — Senior DevOps Engineer",
+      "inLanguage": "ru",
+      "publisher": {"@id": "https://it-mak.github.io/#person"}
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://it-mak.github.io/#profilepage",
+      "url": "https://it-mak.github.io/",
+      "inLanguage": "ru",
+      "name": "Эдуард Македонский — Senior DevOps Engineer (резюме)",
+      "isPartOf": {"@id": "https://it-mak.github.io/#website"},
+      "about": {"@id": "https://it-mak.github.io/#person"},
+      "mainEntity": {"@id": "https://it-mak.github.io/#person"},
+      "primaryImageOfPage": "https://it-mak.github.io/avatar.jpg",
+      "dateModified": "2026-05-10"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://it-mak.github.io/#person",
+      "name": "Эдуард Македонский",
+      "alternateName": ["Eduard Makedonskii", "Eduard Makedonskiy", "edmak"],
+      "givenName": "Эдуард",
+      "familyName": "Македонский",
+      "jobTitle": "Senior DevOps / Platform Engineer",
+      "url": "https://it-mak.github.io/",
+      "image": "https://it-mak.github.io/avatar.jpg",
+      "sameAs": [
+        "https://github.com/it-mak",
+        "https://t.me/edmak",
+        "https://career.habr.com/eduard_mak",
+        "mailto:eduard.devops@gmail.com"
+      ],
+      "description": "Senior DevOps Engineer с опытом 13+ лет (последние 6 — DevOps). CKA. Kubernetes, Terraform, AWS, GitOps, CI/CD, observability. Доступен для part-time, контракта и менторства DevOps. Россия, удалённо.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Saint Petersburg",
+        "addressCountry": "RU"
+      },
+      "workLocation": {"@type": "Place", "name": "Russia (Remote / Worldwide)"},
+      "knowsLanguage": ["ru", "en"],
+      "knowsAbout": [
+        "Kubernetes","Helm","ArgoCD","Terraform","Ansible","GitLab CI","Jenkins",
+        "AWS","GCP","Yandex Cloud","Selectel","Prometheus","Grafana","VictoriaMetrics",
+        "ELK","Sentry","Python","Go","SRE","CI/CD","Observability","DevOps mentoring",
+        "DevOps transformation"
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Certified Kubernetes Administrator (CKA)",
+        "credentialCategory": "certification",
+        "url": "https://www.credly.com/badges/2ef56e82-74e0-4167-80d4-2cfc61783d4c"
+      },
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Senior DevOps Engineer",
+        "occupationLocation": {"@type": "Country", "name": "Remote / Worldwide"},
+        "skills": "Kubernetes, Terraform, AWS, GitOps, CI/CD, observability, Python, Go"
+      },
+      "subjectOf": {
+        "@type": "CreativeWork",
+        "name": "Resume (PDF)",
+        "url": "https://it-mak.github.io/Makedonskii_Eduard.pdf"
+      },
+      "makesOffer": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "DevOps mentoring (online)", "url": "https://it-mak.github.io/services.html"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Senior DevOps engineer for part-time / contract", "url": "https://it-mak.github.io/services.html"}}
+      ]
+    }
+  ]
 }
 </script>
 
@@ -258,7 +302,6 @@
         <div class="hero-buttons">
           <a class="btn" href="mailto:eduard.devops@gmail.com">✉️ Email</a>
           <a class="btn" href="https://t.me/edmak" target="_blank" rel="noopener">📨 Telegram</a>
-          <a class="btn" href="services.html" title="Менторство DevOps и part-time / контракт">🎓 Менторство и part-time</a>
           <a class="btn" href="#" onclick="window.print();return false;" title="Откроется диалог печати — выбери &laquo;Сохранить как PDF&raquo;">⬇️ PDF</a>
           <a class="btn" href="en.html" hreflang="en" title="English version">🇬🇧 EN</a>
         </div>

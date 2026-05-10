@@ -79,5 +79,8 @@ Format: part-time, contract, or project-based / one-off work. Remote, base time 
 ## Crawler notes
 
 - Personal resume + landing site, no paywalled or login-only content.
-- Public schema.org markup for Person, Service, FAQPage on both `/services.html` and `/services-en.html`.
-- Sitemap: `https://it-mak.github.io/sitemap.xml`
+- Public schema.org markup for `Person`, `ProfilePage`, `WebSite`, `Service`, `FAQPage`, `BreadcrumbList`.
+- Sitemap: https://it-mak.github.io/sitemap.xml
+- Extended profile (full content for AI ingestion): https://it-mak.github.io/llms-full.txt
+- External profiles for entity linking: GitHub (https://github.com/it-mak),
+  Habr Career (https://career.habr.com/eduard_mak), Telegram (https://t.me/edmak).
