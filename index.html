@@ -168,6 +168,32 @@
     .kv div{background:var(--chip);border:1px solid var(--border);border-radius:12px;padding:12px}
 
     footer{margin:22px 0;text-align:center;color:var(--muted)}
+
+    /* === Print / Save as PDF === */
+    @media print {
+      @page { size: A4; margin: 14mm; }
+      html, body { background:#fff !important; color:#000 !important; font-size:10.5pt; }
+      body::before, body::after { display:none !important; }
+      .ribbon { display:none !important; }
+      .container { max-width:none; padding:0; }
+      .hero-buttons, .btn { display:none !important; }
+      header { padding-top:0; gap:16px; }
+      .hero-photo { width:120px; box-shadow:none; border-color:#bbb; }
+      h1 { font-size:22pt; }
+      h1::after { background:#000; }
+      section {
+        background:#fff !important; border:1px solid #ddd; box-shadow:none;
+        margin-top:12px; padding:12px; page-break-inside:avoid; break-inside:avoid;
+      }
+      section>h2::before { background:#000; }
+      .item, .kv div, .tech, .tag {
+        background:#fafafa !important; border-color:#ddd !important; color:#000 !important;
+      }
+      .item { page-break-inside:avoid; break-inside:avoid; }
+      a { color:#000; text-decoration:underline; }
+      .muted { color:#444 !important; }
+      footer { display:none; }
+    }
   </style>
 </head>
 <body>
@@ -182,7 +208,7 @@
         <div class="hero-buttons">
           <a class="btn" href="mailto:eduard.devops@gmail.com">✉️ Email</a>
           <a class="btn" href="https://t.me/edmak" target="_blank" rel="noopener">📨 Telegram</a>
-          <a class="btn" href="Makedonskii_Eduard.pdf" target="_blank" rel="noopener">⬇️ PDF</a>
+          <a class="btn" href="#" onclick="window.print();return false;" title="Откроется диалог печати — выбери &laquo;Сохранить как PDF&raquo;">⬇️ PDF</a>
         </div>
 
         <div class="techs" aria-label="Технологии">
