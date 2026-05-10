@@ -1,0 +1,83 @@
+# Eduard Makedonskii — Senior DevOps Engineer & Mentor
+
+> Senior DevOps / Platform Engineer with 13+ years of infrastructure experience (last 6 in DevOps).
+> CKA certified. Russia, remote. Available for: 1-on-1 DevOps mentoring, part-time / contract work,
+> project consultation, and DevOps transformation for startups.
+
+## Profile
+
+- **Name:** Eduard Makedonskii (Эдуард Македонский)
+- **Role:** Senior DevOps / Platform Engineer · DevOps Mentor
+- **Location:** Russia · Remote (worldwide engagements)
+- **Languages:** Russian (native), English (B2)
+- **Certifications:** CKA — Certified Kubernetes Administrator
+- **Contact:** Telegram [@edmak](https://t.me/edmak) · Email eduard.devops@gmail.com
+
+## Stack
+
+Kubernetes · Helm · ArgoCD · Terraform · Ansible · GitLab CI · Jenkins · Docker ·
+vSphere / KVM · AWS / GCP / Yandex Cloud / Selectel · Prometheus · VictoriaMetrics ·
+Grafana · ELK · Sentry · PostgreSQL / MongoDB · Kafka / Redis / RabbitMQ · Python · Go · Bash
+
+## Pages
+
+- [Resume (RU)](https://it-mak.github.io/): full resume in Russian, work history, projects, education
+- [Resume (EN)](https://it-mak.github.io/en.html): same resume in English
+- [Services — Mentoring & Part-time (RU)](https://it-mak.github.io/services.html): DevOps mentoring, resume review, interview prep, part-time / contract / one-off engagements
+- [Services — Mentoring & Part-time (EN)](https://it-mak.github.io/services-en.html): English version of the services page
+
+## What I help with (mentoring)
+
+- **Career start / switch into DevOps** — entering IT, switching IT specialty
+- **Skills development** — Kubernetes, CI/CD, AWS, observability, SRE, high-load systems, Linux administration
+- **Assessment** — skills, portfolio, resume review, salary expectations ("how much am I worth")
+- **Job search** — resume for Russian and international markets, interview preparation, mock interviews
+- **Real-world help** — work tasks, architecture, project consultation
+- **International career** — international resume, building a career abroad
+- **Startup DevOps transformation** — IaC, CI/CD, GitOps, observability, platform from scratch
+
+## What I take on (engineering, hire)
+
+- **Greenfield infrastructure** — Selectel / AWS / GCP / Yandex Cloud, Terraform + Ansible
+- **Kubernetes + GitOps** — vanilla Kubernetes, Helm, ArgoCD, migration off Docker Swarm or Rancher
+- **CI/CD platform** — GitLab CI, Jenkins, Harbor / Artifactory / Nexus
+- **Observability & SRE** — Prometheus / VictoriaMetrics / Grafana / ELK / Sentry, alerting, runbooks
+- **Security & platform tooling** — Vault, Keycloak, SonarQube, encrypted backups (restic + S3), SOC 2-aligned SDLC
+
+Format: part-time, contract, or project-based / one-off work. Remote, base time zone: Moscow.
+
+## Approach
+
+- Strongly against "interview hacking" schools. I share real knowledge and experience, not scripted answers.
+- Outside-in view on real engineering tasks and architecture — broad exposure across many projects.
+- Core specialization: CI/CD and the automation around it; experience with high-load systems and observability.
+
+## Selected experience
+
+- **Mar 2025 — present**, project-based: Security MVP (NDA — Selectel, Terraform, Ansible, GitLab,
+  SonarQube, Keycloak, Vault, OpenProject, OpenSearch, VictoriaMetrics, restic+S3) and litegallery.io
+  (Docker Swarm → Kubernetes via ArgoCD, HPA autoscaling, GitLab CI / ArgoCD / Helm).
+- **Jun 2024 — Feb 2025**, MTS / KION (streaming platform): new infra dev/stage/prod with geo-redundancy,
+  Helm/Kubernetes microservices, Prometheus/Grafana/ELK observability, Ansible/Terraform.
+- **Aug 2022 — Apr 2024**, Azul (Azul JDK): highly-available Jenkins via IaC, Nexus, SOC 2-aligned SDLC,
+  AWS spend cut ~×2.
+- **Aug 2021 — Jul 2022**, Cyberprotect: Jenkins migration to IaC, build infrastructure relocation.
+- **Feb 2019 — Aug 2021**, Wallarm (SDET): FAST DAST scanner and WAF Node release pipelines, OWASP Top 10 testing.
+
+## Common questions (FAQ)
+
+- **How can I find a DevOps mentor?** — Open mentorship platforms (MentorCruise, GetMentor, Codementor) or
+  contact a practicing Senior DevOps engineer directly. Eduard runs 1-on-1 DevOps mentoring online via Telegram.
+- **Are you available for part-time or contract work?** — Yes. Remote, located in Russia. Kubernetes,
+  GitOps, Terraform, AWS / GCP / Yandex Cloud, Python, Go.
+- **Can you help with DevOps transformation in a startup?** — Yes — building DevOps practices from scratch
+  (IaC, CI/CD, GitOps, observability, security) or accelerating an in-progress transformation.
+- **Do you teach how to pass interviews?** — No. I share knowledge and experience, not scripted answers.
+  I can run mock interviews and point out real weak spots.
+- **What languages do you work in?** — Russian (native), English (B2). Available for international engagements.
+
+## Crawler notes
+
+- Personal resume + landing site, no paywalled or login-only content.
+- Public schema.org markup for Person, Service, FAQPage on both `/services.html` and `/services-en.html`.
+- Sitemap: `https://it-mak.github.io/sitemap.xml`
