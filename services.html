@@ -11,7 +11,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>DevOps инженер senior: обучение, ментор, part-time, контракт — Эдуард Македонский</title>
-  <meta name="description" content="Senior DevOps инженер (13+ лет, CKA). Индивидуальное обучение DevOps с практикующим инженером, проверка резюме, подготовка к собеседованию, помощь с проектом, DevOps-трансформация стартапа. Part-time / контракт удалённо. Россия.">
+  <meta name="description" content="Senior DevOps инженер (около 15 лет в IT, CKA). Индивидуальное обучение DevOps с практикующим инженером, проверка резюме, подготовка к собеседованию, помощь с проектом, DevOps-трансформация стартапа. Part-time / контракт удалённо. Россия.">
   <meta name="keywords" content="DevOps инженер senior, обучение DevOps инженер, DevOps инженер с нуля, DevOps инженер курсы, DevOps инженер удаленно, резюме DevOps инженер, ментор DevOps, наставник DevOps, помощь с DevOps, консультация DevOps, проверка резюме DevOps, подготовка к собеседованию DevOps, DevOps-трансформация стартап, DevOps инженер part-time, DevOps инженер аутсорс, DevOps инженер контракт, Kubernetes ментор, CI/CD ментор, SRE ментор">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://it-mak.github.io/services.html">
@@ -21,7 +21,7 @@
 
   <meta name="color-scheme" content="dark light"/>
   <meta property="og:title" content="DevOps инженер: менторство и part-time — Эдуард Македонский"/>
-  <meta property="og:description" content="Senior DevOps инженер (13+ лет, CKA). Менторство, part-time / контракт. Россия, удалённо."/>
+  <meta property="og:description" content="Senior DevOps инженер (около 15 лет в IT, CKA). Менторство, part-time / контракт. Россия, удалённо."/>
   <meta property="og:type" content="profile"/>
   <meta property="og:image" content="avatar.jpg"/>
   <meta property="og:url" content="https://it-mak.github.io/services.html">
@@ -56,7 +56,7 @@
         "https://career.habr.com/eduard_mak",
         "mailto:eduard.devops@gmail.com"
       ],
-      "description": "Senior DevOps инженер с опытом 13+ лет (последние 6 — DevOps). CKA. Менторство DevOps, part-time / контракт, помощь с проектами и DevOps-трансформацией стартапа.",
+      "description": "Senior DevOps инженер с опытом в IT с 2011 года. CKA. Менторство DevOps, part-time / контракт, помощь с проектами и DevOps-трансформацией стартапа.",
       "address": {"@type": "PostalAddress", "addressCountry": "RU"},
       "knowsLanguage": ["ru", "en"],
       "knowsAbout": [
@@ -176,6 +176,10 @@
     .card ul{margin:0;padding-left:18px;color:var(--muted)}
     .card li{margin:0 0 4px;font-size:14px;line-height:1.5}
     .card li:last-child{margin-bottom:0}
+    .situations{grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+    .situations .card p{font-size:14px;line-height:1.6}
+    .situations .card p + p{margin-top:12px}
+    .situations .situation{color:var(--muted)}
 
     .approach{margin-top:18px;padding:0;list-style:none}
     .approach li{
@@ -254,6 +258,7 @@
       .card{background:#fafbfd !important;border:1px solid #d8dde7 !important;page-break-inside:avoid}
       .card h3{color:#0b1020 !important}
       .card ul{color:#3a4150 !important}
+      .situations .situation{color:#3a4150 !important}
       .approach li{color:#0b1020 !important}
       .approach li::before{background:#0b1020 !important}
       .faq summary{color:#0b1020 !important}
@@ -275,7 +280,7 @@
       <img src="avatar.jpg" alt="Эдуард Македонский — Senior DevOps инженер и DevOps ментор" class="hero-photo" width="424" height="510" loading="eager" decoding="async"/>
       <div class="hero-wrap">
         <h1>Менторство DevOps и part-time</h1>
-        <div class="role">Эдуард Македонский · Senior DevOps Engineer · 13+ лет, CKA · Россия · Remote</div>
+        <div class="role">Эдуард Македонский · Senior DevOps Engineer · около 15 лет в IT, CKA · Россия · Remote</div>
         <p class="summary">Помогаю с переходом в DevOps, развитием навыков, оценкой резюме и подготовкой к собеседованию. Беру стартапы на DevOps-трансформацию и присоединяюсь к командам part-time / контрактом / на разовые задачи. Передаю реальный опыт, а не учу проходить собеседования.</p>
         <div class="hero-buttons">
           <a class="btn btn--primary" href="https://t.me/edmak" target="_blank" rel="noopener">Написать в Telegram</a>
@@ -288,42 +293,44 @@
 
     <section id="mentoring">
       <h2>Менторство DevOps / SRE</h2>
-      <div class="sub">Индивидуально, онлайн. Для тех, кто только входит в DevOps, и для практикующих инженеров — обратная связь от человека из индустрии.</div>
+      <div class="sub">Индивидуальные консультации онлайн от 2 000 ₽.</div>
 
-      <div class="grid-2">
+      <div class="grid-2 situations">
         <div class="card">
-          <h3>Карьера и навыки</h3>
-          <ul>
-            <li>Войти в IT, смена IT-профессии</li>
-            <li>Учебный план под цель</li>
-            <li>Целевое развитие навыков (Kubernetes, CI/CD, AWS, observability, SRE)</li>
-          </ul>
+          <h3>Хочу в DevOps, но не понимаю, с чего начать</h3>
+          <p class="situation">Смотрю вакансии, а там десятки технологий. Открываю очередной курс и сомневаюсь, туда ли трачу время. Хочется понять, что из моего опыта пригодится и чему учиться дальше.</p>
+          <p>Разберём, что вы уже умеете, и составим план обучения с задачами для практики.</p>
         </div>
         <div class="card">
-          <h3>Резюме и собеседования</h3>
-          <ul>
-            <li>Оценка навыков и портфолио, "сколько я стою"</li>
-            <li>Резюме для российского и иностранного рынка</li>
-            <li>Подготовка к собеседованию, тестовое собеседование</li>
-          </ul>
+          <h3>Отправляю резюме, а в ответ тишина</h3>
+          <p class="situation">Опыт есть, задачи решаю, но до собеседований почти не дохожу. Не понимаю, выбираю ли неподходящие вакансии или плохо рассказываю о себе.</p>
+          <p>Посмотрим ваше резюме и вакансии, на которые вы откликаетесь. Найдём, что изменить и о каком опыте рассказать подробнее.</p>
         </div>
         <div class="card">
-          <h3>Помощь с задачей</h3>
-          <ul>
-            <li>Рабочая задача — взгляд со стороны</li>
-            <li>Архитектура, ревью</li>
-            <li>Помощь с проектом</li>
-          </ul>
+          <h3>На работе справляюсь, а на собеседованиях теряюсь</h3>
+          <p class="situation">Делал это руками, но когда просят объяснить, начинаю путаться. После интервью вспоминаю, что мог ответить. А где ошибся, так и не понимаю.</p>
+          <p>Проведём пробное собеседование по выбранной вакансии. Обсудим ваши ответы и то, что стоит подтянуть перед настоящим интервью.</p>
         </div>
         <div class="card">
-          <h3>Карьера за рубежом</h3>
-          <ul>
-            <li>Резюме и подача под международный рынок</li>
-            <li>Построение карьеры за рубежом</li>
-            <li>Подготовка к интервью на английском</li>
-          </ul>
+          <h3>Учусь постоянно, но не понимаю, расту ли</h3>
+          <p class="situation">Курсы прохожу, инструменты пробую. Хочется перейти на следующую позицию, но оценить свои знания сложно.</p>
+          <p>Сравним ваш опыт с требованиями к интересующей позиции. Выберем, чему уделить время и на каких задачах потренироваться.</p>
+        </div>
+        <div class="card">
+          <h3>Застрял на задаче, а посоветоваться не с кем</h3>
+          <p class="situation">Документацию прочитал, несколько решений попробовал, но всё ещё не работает. Нужен человек, с которым можно разобраться, куда смотреть дальше.</p>
+          <p>Посмотрим на задачу вместе, обсудим, что вы уже пробовали и что ещё можно проверить.</p>
         </div>
       </div>
+
+      <div class="cta">
+        <div>
+          <b>Консультации от 2 000 ₽</b>
+          <p>Напишите, что у вас сейчас не получается. Формат и стоимость согласуем до встречи.</p>
+        </div>
+        <a class="btn btn--primary" href="https://t.me/edmak" target="_blank" rel="noopener">Обсудить свою ситуацию</a>
+      </div>
+      <p class="sub">Также помогаю с резюме для международного рынка и подготовкой к интервью на английском.</p>
 
       <ul class="approach">
         <li>Категорически против "волков": даю знания и передаю опыт, а не натаскиваю на ответы. Некоторыми секретами поделюсь.</li>

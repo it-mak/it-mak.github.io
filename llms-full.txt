@@ -1,7 +1,7 @@
 # Eduard Makedonskii — Senior DevOps Engineer & Mentor (full content)
 
 > Eduard Makedonskii (Эдуард Македонский) is a Senior DevOps / Platform Engineer based in Russia
-> with 13+ years of infrastructure experience, the last 6 of which in DevOps. He holds the CKA
+> with around 15 years of IT experience, working with infrastructure since 2011. He holds the CKA
 > (Certified Kubernetes Administrator) certification. He works remotely worldwide and is open
 > to part-time / contract engagements as well as 1-on-1 DevOps and SRE mentoring.
 
